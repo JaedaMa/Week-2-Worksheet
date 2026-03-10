@@ -1,0 +1,59 @@
+import numpy as np
+
+# growth rate
+k = 0.084
+
+# model function
+def P(t):
+    return 77 * np.exp(k * t)
+
+# predicted production in 2025 (t = 0)
+print(P(0))
+
+# production after 10 years
+print(P(10))
+
+
+import numpy as np
+
+N0 = 1000
+T = 20  # doubling time (minutes)
+
+# calculate growth constant
+k = np.log(2) / T
+
+def N(t):
+    return N0 * np.exp(k * t)
+
+# bacteria after 120 minutes
+print(N(120))
+
+
+
+mport numpy as np
+
+growth_rate = 8.4
+
+# Rule of 70
+rule70 = 70 / growth_rate
+
+# exact doubling time
+k = 0.084
+exact = np.log(2) / k
+
+print("Rule of 70:", rule70)
+print("Exact doubling time:", exact)
+print("Difference:", rule70 - exact)
+
+carbon dating
+
+import numpy as np
+
+half_life = 5730
+
+# 25% remaining
+fraction = 0.25
+
+age = np.log(fraction) / np.log(0.5) * half_life
+
+print("Age of fossil:", age)
